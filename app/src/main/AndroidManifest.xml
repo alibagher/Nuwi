@@ -9,13 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
-        <activity android:name="com.example.Nuwi.MainActivity">
+        <activity android:name=".LoadStartActivity" android:noHistory="true"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Pop" />
+        <activity android:name=".FocusPopUp" />
+        <activity android:name=".PostWorkout" />
     </application>
 
 </manifest>

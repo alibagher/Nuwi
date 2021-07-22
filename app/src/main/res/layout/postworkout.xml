@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/greatWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:paddingTop="125dp"
+        android:text="Great Work!"
+        android:textAlignment="center"
+        android:textColor="#504C4C"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/Description1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:text="Description"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Description2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/Description3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/randomFact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:paddingBottom="125dp"
+        android:text="a Random Fact!"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/share"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Share this fact"
+        android:textAlignment="center"
+        android:translationX="45dp" />
+
+    <Button
+        android:id="@+id/feedback"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:text="Send feedback"
+        android:translationX="45dp" />
+
+    <Button
+        android:id="@+id/stats"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:text="View my stats"
+        android:translationX="45dp" />
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:translationX="45dp" />
+</LinearLayout>

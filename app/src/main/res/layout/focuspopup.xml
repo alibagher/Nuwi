@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/focuspopup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20sp"
+        android:paddingBottom="40sp"
+        android:text="Focus"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/fullbody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Body" />
+
+    <Button
+        android:id="@+id/ub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upper Body" />
+
+    <Button
+        android:id="@+id/lb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lower Body" />
+
+    <Button
+        android:id="@+id/arms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arms" />
+
+    <Button
+        android:id="@+id/shoulders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shoulders" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/chest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chest" />
+
+    <Button
+        android:id="@+id/core"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Core" />
+
+    <Button
+        android:id="@+id/legs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Legs" />
+
+    <Button
+        android:id="@+id/glutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glutes" />
+
+</LinearLayout>

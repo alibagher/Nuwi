@@ -24,6 +24,8 @@
         android:id="@+id/timeSeekBar"
         android:layout_width="232dp"
         android:layout_height="21dp"
+        android:max="32"
+        android:progress="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -35,7 +37,7 @@
         android:id="@+id/timeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="25 Minutes"
+        android:text="3 Minutes"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/timeSeekBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,6 +50,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="sendMessage"
         android:text="Start"
         app:backgroundTint="@empty"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,11 +61,11 @@
         app:layout_constraintVertical_bias="0.748" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/focusButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="68dp"
-        android:text="LATER"
+        android:text="Full Body"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,12 +74,11 @@
         app:layout_constraintVertical_bias="0.701" />
 
     <Button
-        android:id="@+id/button2"
-        style="@android:style/Theme.Material.Light.Voice"
+        android:id="@+id/intensityButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:text="LATER"
+        android:text="Advanced"
         android:textColor="@color/black"
         app:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,9 +93,9 @@
         android:layout_marginBottom="40dp"
         android:text="Difficulty"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2" />
+        app:layout_constraintBottom_toTopOf="@+id/intensityButton"
+        app:layout_constraintEnd_toEndOf="@+id/intensityButton"
+        app:layout_constraintStart_toStartOf="@+id/intensityButton" />
 
     <TextView
         android:id="@+id/focusLabel"
@@ -102,8 +104,8 @@
         android:layout_marginBottom="40dp"
         android:text="Focus"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button3" />
+        app:layout_constraintBottom_toTopOf="@+id/focusButton"
+        app:layout_constraintEnd_toEndOf="@+id/focusButton"
+        app:layout_constraintStart_toStartOf="@+id/focusButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
