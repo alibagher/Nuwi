@@ -152,4 +152,11 @@ class FocusPopUp : AppCompatActivity(), OnClickListener{
         }
 
     }
+
+    override fun onBackPressed() {
+        val intent = Intent()
+        intent.putExtra("MESSAGE", selected!!.text)
+        setResult(RESULT_OK, intent)
+        finish()
+    }
 }

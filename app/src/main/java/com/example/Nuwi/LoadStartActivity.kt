@@ -11,6 +11,9 @@ import android.widget.MediaController
 import android.widget.TextView
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.Nuwi.fragments.EXTRA_MESSAGE
+import com.example.Nuwi.fragments.EXTRA_MESSAGE_TIME
+import com.example.Nuwi.fragments.EXTRA_MESSAGE_TWO
 
 var myActivity:Activity ? = null;
 
@@ -92,6 +95,8 @@ class LoadStartActivity : AppCompatActivity() {
 //        mediaC.setAnchorView(myVideoView);
 //        myVideoView.start()
     }
+
+
 
 //    val t = Thread()
 //    val view1Thrad: Thread = Thread(Runnable(){

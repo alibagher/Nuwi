@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.Nuwi.fragments.EXTRA_MESSAGE
+import com.example.Nuwi.fragments.EXTRA_MESSAGE_TIME
+import com.example.Nuwi.fragments.EXTRA_MESSAGE_TWO
 
 class PostWorkout : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +20,7 @@ class PostWorkout : AppCompatActivity() {
         val description1 = findViewById<TextView>(R.id.Description1);
         description1.text = "You just did a "
         val description2 = findViewById<TextView>(R.id.Description2);
-        description2.text = duration + " min " + intensity + " " + focus + "workout"
+        description2.text = duration + " min " + intensity + " " + focus + " workout"
         val description3 = findViewById<TextView>(R.id.Description3);
         description3.text = "and burned about - calories."
         val randomFact = findViewById<TextView>(R.id.randomFact);
