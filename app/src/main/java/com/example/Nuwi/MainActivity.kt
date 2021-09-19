@@ -54,7 +54,7 @@ public class MainActivity : AppCompatActivity()  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // TODO: Onboarding
+        // TODO: Onboar ding
 //        PreferenceManager.getDefaultSharedPreferences(this).apply {
 //            // Check if we need to display our OnboardingSupportFragment
 ////            if (!getBoolean(OnBoardingFragment.COMPLETED_ONBOARDING_PREF_NAME, false)) {
