@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
+        <uses-library android:name ="org.apache.http.legacy" android:required ="false"/>
         <activity android:name=".LoadStartActivity" android:noHistory="true"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -22,5 +23,8 @@
         <activity android:name=".PostWorkout" />
         <activity android:name=".Onboarding.OnboardingActivity" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

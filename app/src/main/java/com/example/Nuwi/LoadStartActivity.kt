@@ -5,12 +5,18 @@ import android.app.Activity
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
+import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.MediaController
 import android.widget.TextView
+import android.widget.Toast
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
+import com.amazonaws.auth.CognitoCachingCredentialsProvider
+import com.amazonaws.mobileconnectors.lambdainvoker.*
+import com.amazonaws.regions.Regions
 import com.example.Nuwi.fragments.EXTRA_MESSAGE
 import com.example.Nuwi.fragments.EXTRA_MESSAGE_TIME
 import com.example.Nuwi.fragments.EXTRA_MESSAGE_TWO
@@ -50,14 +56,47 @@ class LoadStartActivity : AppCompatActivity() {
 
 
         //todo - call lambda and pass params to it
+        val credentialsProvider = CognitoCachingCredentialsProvider(
+            getApplicationContext(),
+            "us-east-1:4ceb213b-4af1-4689-92ed-1f7edc580474", // Identity pool ID
+            Regions.US_EAST_1 // Region
+        );
 
+        val factory = LambdaInvokerFactory(this.getApplicationContext(), Regions.US_EAST_1,
+            credentialsProvider);
 
+        val lambda = factory.build(Lambda::class.java)
 
+        val request = RequestClass("John", "Doe")
 
         //todo - get response url from lambda and store as variable
 
+        val result = lambda.AndroidBackendLambdaFunction(request)
 
+        // The Lambda function invocation results in a network call.
+// Make sure it is not called from the main thread.
+        object : AsyncTask<RequestClass?, Void?, ResponseClass?>() {
+            protected fun doInBackground(vararg params: RequestClass): ResponseClass? {
+                // invoke "echo" method. In case it fails, it will throw a
+                // LambdaFunctionException.
+                return try {
+                    lambda.AndroidBackendLambdaFunction(params[0])
+                } catch (lfe: LambdaFunctionException) {
+                    Log.e("Tag", "Failed to invoke echo", lfe)
+                    null
+                }
+            }
 
+            override fun onPostExecute(result: ResponseClass?) {
+                if (result == null) {
+                    return
+                }
+            }
+        }.execute(request)
+
+        if (result != null) {
+            Toast.makeText(getApplicationContext(), result.greetings, Toast.LENGTH_LONG).show()
+        }
 
         // Capture the layout's TextView and set the string as its text
         val textView = findViewById<TextView>(R.id.textView).apply {
