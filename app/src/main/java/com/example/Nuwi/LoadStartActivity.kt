@@ -48,6 +48,17 @@ class LoadStartActivity : AppCompatActivity() {
         val focus = intent.getStringExtra(EXTRA_MESSAGE_TWO)
         val duration = intent.getStringExtra(EXTRA_MESSAGE_TIME)
 
+
+        //todo - call lambda and pass params to it
+
+
+
+
+        //todo - get response url from lambda and store as variable
+
+
+
+
         // Capture the layout's TextView and set the string as its text
         val textView = findViewById<TextView>(R.id.textView).apply {
             text = intensity + focus + duration
@@ -55,14 +66,20 @@ class LoadStartActivity : AppCompatActivity() {
 //        val thread = SimpleThread()
 //        thread.start()
 
-
         // Run the video in another thread
         Thread {
             runOnUiThread {
                 //your code or your request that you want to run on uiThread
                 val myVideoView = this?.findViewById<View>(R.id.videoView) as VideoView
+
+
+
+                //todo - pass variable holding url of workout video to play in video player
                 val path = "android.resource://" + this?.packageName + "/" + R.raw.movie
                 myVideoView.setVideoURI(Uri.parse(path))
+
+
+
                 val mediaC :MediaController  = MediaController(this);
                 myVideoView.setMediaController(mediaC)
                 mediaC.setAnchorView(myVideoView);
